@@ -25,7 +25,9 @@ mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true,fa
 app.listen(PORT,()=>{
     console.log(`listening on port http://localhost:${PORT}`);
 });
-
+app.use("/",(req,res)=>{
+    res.send("hello world");
+})
 //Logging in user
 app.post("/login",(req,res)=>{
     const {name,password,slot} =req.body;
