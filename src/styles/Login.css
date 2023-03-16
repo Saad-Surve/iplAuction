@@ -19,11 +19,9 @@
     display: flex;
 }
 .image{
-    width: 12%;
+    width: 12vw;    
 }
-.image img{
-    max-width: 100%;
-}
+
 .LoginContainer{
     width: 30%;
     height: 25vw;
@@ -71,5 +69,32 @@
     background-color: #040112;
     color: white;
     transition: 0.6s ease-in-out;
+}
+@media only screen and (max-width:1000px) {
+    .image-container{
+        height: 15vh;
+    }
+    .image{
+        width:30vw
+    }
+    .Name{
+        font-size: 4vh;
+    }
+    .LoginContainer{
+        margin: 12vw;
+        width: 90%;
+        height: 50vh;
+        padding-top: 5vw;
+        gap: 5vw;
+        justify-content: start;
+    }
+    .LoginContainer input{
+        height: 10vh;
+        font-size: 4vh;
+    }
+    .LoginContainer button{
+        font-size: 4vh;
+        padding: 2vh;
+    }
 }
 

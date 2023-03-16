@@ -31,7 +31,7 @@ app.post("/login",(req,res)=>{
     teamUser.findOne({name,slot},(err,user)=>{
         if(user){
             if(password===user.password){
-                res.send({message:"login successfully",user:user})
+                res.send({messge:"login succesful",user:user})
             }else{
                 res.send({message:"password does not match"})
             }
