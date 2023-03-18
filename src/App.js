@@ -8,7 +8,6 @@ import Calculator from './Components/Calculator';
 import Leaderboard from './Components/Leaderboard';
 import OtherTeams from './Components/OtherTeams';
 import Login from './Components/Login';
-import Admin from './Components/Admin';
 function App() { 
   return (
     <BrowserRouter>
@@ -19,7 +18,6 @@ function App() {
             <Route exact path='/calculator' element={<Calculator/>}/>
             <Route exact path='/leaderboard' element={<Leaderboard/>}/>
             <Route exact path='/otherteams/:name' element={<OtherTeams />}/>
-            <Route exact path='/admin'   element={<Admin />}/>
           </Routes>
         
       

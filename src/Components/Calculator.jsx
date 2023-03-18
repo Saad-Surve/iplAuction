@@ -21,7 +21,6 @@ export default function Calculator() {
   const calculate = () => {
     let sc = 0,btppl=0,btmo=0,btdth=0,boppl=0,bomo=0,bodth=0;
     if (!(batppl.length==4&&batmo.length==4&&batdth.length==2&&bowlppl.length==3&&bowlmo.length==3&&bowldth.length==2)) {
-      // alert(batppl.length+","+batmo.length+","+batdth.length+","+bowlppl.length+","+bowlmo.length+","+bowldth.length);
       alert("Cannot Calculate. Enter valid team composition");
       return false;
     }
@@ -47,9 +46,25 @@ export default function Calculator() {
     })
 
     teamPlayers.forEach((p)=>{
-      sc+=p.overall;
-    })
+      sc+=p.overall+p.iccRanking;
 
+    })
+    let pc = []
+    let flag = false;
+    for (let index = 0; index < pc.length; index++) {
+
+      for (let j = index; j < pc.length; j++) {
+        if (pc[index].playerChemistry===pc[j].playerChemistry) {
+          sc+=5;
+          flag = true;
+          break;
+        }
+      }
+      if (flag) {
+        break;
+      }
+    }
+    
     if (btppl>36) {
       sc+=5;
     }

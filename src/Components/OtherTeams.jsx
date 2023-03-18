@@ -22,7 +22,7 @@ export default function OtherTeams() {
           setBudget(data.teamDetails.budget)
           setPlayers(data.teamDetails.players)
           setTeamLogo(data.teamDetails.teamImg)
-          setPowercards(data.teamDetails.powercard)
+          setPowercards(data.teamDetails.powercards)
         }
       })
       return ()=>{

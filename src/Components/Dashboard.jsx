@@ -18,7 +18,7 @@ export default function Dashboard() {
       setTeamLogo(data.teamDetails.teamImg)
       setBudget(data.teamDetails.budget)
       setPlayers(data.teamDetails.players)
-      setPowercards(data.teamDetails.powercard)  
+      setPowercards(data.teamDetails.powercards)  
     })
   },[])
 
